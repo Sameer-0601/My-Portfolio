@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0a0a0a;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #000;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 0 10px deepskyblue;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: deepskyblue;
+}
+
+nav a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: deepskyblue;
+  transform: scale(1.05);
+}
+
+.home {
+  text-align: center;
+  padding: 4rem 1rem;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0; transform: translateY(20px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+.home h1 {
+  font-size: 2.8rem;
+}
+
+.home h1 span {
+  color: deepskyblue;
+}
+
+.home h3 {
+  margin-top: 0.5rem;
+  font-weight: normal;
+  color: lightgray;
+}
+
+.home p {
+  margin-top: 1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1rem;
+  color: lightgray;
+}
+
+.profile {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin: 2rem auto 1rem;
+  box-shadow: 0 0 20px deepskyblue;
+  transition: transform 0.3s ease;
+}
+
+.profile:hover {
+  transform: scale(1.05);
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.btn-link {
+  background-color: transparent;
+  border: 2px solid deepskyblue;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px deepskyblue;
+}
+
+.btn-link:hover {
+  background-color: deepskyblue;
+  color: black;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px deepskyblue;
+}
+
+section {
+  padding: 3rem 1rem;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.skills .bar {
+  margin: 1rem auto;
+  background-color: #333;
+  height: 20px;
+  width: 90%;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: left;
+  position: relative;
+  box-shadow: 0 0 10px black;
+}
+
+.skills .bar span {
+  position: absolute;
+  left: 0;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.skills .bar div {
+  height: 100%;
+  background-color: deepskyblue;
+  border-radius: 20px;
+  animation: grow 1s ease-in-out;
+}
+
+@keyframes grow {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+footer {
+  padding: 1rem;
+  background-color: #000;
+  text-align: center;
+  color: lightgray;
+  box-shadow: 0 -5px 10px deepskyblue;
+}
