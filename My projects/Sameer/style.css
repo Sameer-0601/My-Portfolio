@@ -1,0 +1,204 @@
+:root {
+    --bg-dark: #0b0e1e;
+    --bg-light: #f0f0f0;
+    --text-dark: #ffffff;
+    --text-light: #0b0e1e;
+    --primary-color: #5ab0ff;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  body.light-mode {
+    background-color: var(--bg-light);
+    color: var(--text-light);
+  }
+  
+  header {
+    background: inherit;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: var(--primary-color);
+  }
+  
+  #modeToggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+  
+  .section {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .profile-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+.about-content {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+  
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+  }
+  
+  .highlight {
+    color: var(--primary-color);
+  }
+  
+  .skills-container {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .skill {
+    margin-bottom: 1.5rem;
+  }
+  
+  .bar {
+    height: 10px;
+    background: #333;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .bar::after {
+    content: '';
+    display: block;
+    height: 100%;
+    background-color: var(--primary-color);
+    animation: fill 2s forwards;
+  }
+  
+  .bar.html::after { width: 90%; }
+  .bar.css::after { width: 80%; }
+  .bar.js::after { width: 75%; }
+  
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .card {
+    background: #121b3b;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(90, 176, 255, 0.3);
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-8px);
+  }
+  
+  body.light-mode .card {
+    background: #ffffff;
+    color: #0b0e1e;
+    box-shadow: 0 0 10px rgba(90, 176, 255, 0.1);
+  }
+  
+  footer {
+    text-align: center;
+    padding: 2rem;
+    background: inherit;
+  }
+  
+  #topBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 15px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    display: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  
+  .resume-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+  
+  .resume-btn:hover {
+    background: #3490ff;
+  }
+  
+  .social-icons {
+    margin-top: 1rem;
+  }
+  
+  .social-icons a {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: transform 0.2s ease;
+  }
+  
+  .social-icons a:hover {
+    transform: scale(1.2);
+  }
+  
